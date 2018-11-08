@@ -26,18 +26,18 @@ func (s Santanaut) IsValidTarget(target Santanaut) bool {
 		return false
 	}
 
-	if contains(s.Blacklist, target.Id) {
+	if Contains(s.Blacklist, target.Id) {
 		return false
 	}
 
-	if contains(s.Targets, target.Id) {
+	if Contains(s.Targets, target.Id) {
 		return false
 	}
 
 	return true
 }
 
-func contains(s []string, e string) bool {
+func Contains(s []string, e string) bool {
 	for _, a := range s {
 		if a == e {
 			return true
